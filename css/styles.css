@@ -118,13 +118,16 @@ header {
 }
 /* --- Hero --- */
 .hero {
-    background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.8)), url('../img/hero-bg.jpg');
+    background: linear-gradient(rgba(0, 51, 102, 0.6), rgba(0, 51, 102, 0.6)), url('../img/WhatsApp\ Image\ 2026-01-11\ at\ 7.56.14\ PM.jpeg');
     background-size: cover;
     background-position: center;
     color: var(--white);
-    padding: 100px 0;
+    padding: 120px 0;
     text-align: center;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.3);
 }
+
+
 .hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
 .hero p { font-size: 1.2rem; margin-bottom: 30px; max-width: 800px; margin-left: auto; margin-right: auto; }
 

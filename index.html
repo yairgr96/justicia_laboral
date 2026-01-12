@@ -169,16 +169,58 @@
         </div>
     </section>
 
-    <!--  <section class="section-padding" style="background-color: var(--white);">
+    <section class="section-padding" style="background-color: var(--white);">
         <div class="container">
             <h2 class="text-center">Casos de éxito</h2>
-            <div class="testimonial">
-                <p>"Recuperé mi liquidación completa después de haber sido despedido injustamente. Excelente
-                    representación."</p>
-                <strong>- J. Martínez</strong>
+            <div id="success-cases">
+                <div class="testimonial">
+                    <p>"Gracias al equipo jurídico de justicia laboral México pude recuperar mi liquidación completa después de un despido injustificado. Me guiaron en todo el proceso y siempre estuvieron disponibles para resolver mis dudas."</p>
+                    <strong>— Ana G., Ciudad de México.</strong>
+                </div>
+                <!-- Add more testimonials here dynamically -->
             </div>
+            <button id="view-more" class="btn">Ver más</button>
+            <button id="view-less" class="btn" style="display:none;">Ver menos</button>
         </div>
-    </section> -->
+    </section>
+
+    <script>
+        document.getElementById('view-more').addEventListener('click', function() {
+            const successCases = document.getElementById('success-cases');
+            const testimonials = [
+                
+                { text: '“Excelente asesoría laboral. Profesionalismo, compromiso y resultados. Sin duda, la mejor decisión que pude tomar fue contratar estos servicios.”', author: '— Luis R., Estado de México.' },
+                { text: '“Me ayudaron a negociar mi finiquito y a comprender mis derechos laborales. Su apoyo fue fundamental y siempre actuaron con transparencia y respeto.”', author: '— María T., Ciudad de México.' },
+                { text: '“Un equipo con experiencia y sensibilidad. Supieron escuchar mi caso y lograron un acuerdo favorable en menor tiempo del que esperaba.”', author: '— Carlos M., Estado de México.' },
+                { text: '“Desde la primera cita me sentí apoyada. Me explicaron mis opciones legales y me acompañaron paso a paso. ¡100% recomendados!”', author: '— Lorena S., Ciudad de México.' },
+                { text: '“Su profesionalismo marcó la diferencia. Gracias a su intervención obtuve la indemnización que me correspondía y resolvimos mi conflicto laboral sin estrés.”', author: '— Jorge A., Estado de México.' },
+                { text: '“Siempre estuvieron en comunicación conmigo, explicándome cada etapa del proceso legal. Su compromiso con mi caso fue excepcional.”', author: '— Adriana V., Ciudad de México.' },
+                { text: '“Me asesoraron en un caso de hostigamiento laboral y defendieron mis derechos con firmeza. Su manejo del caso fue claro y eficiente.”', author: '— Ricardo P., Ciudad de México.' },
+                { text: '“Profesionales y éticos. Me ayudaron en mi demanda laboral con resultados exitosos. Los recomiendo ampliamente.”', author: '— Elena F., Estado de México.' },
+                { text: '“Gracias a su experiencia logré un arreglo justo con mi antiguo empleador. Fueron transparentes y resolutivos desde el inicio.”', author: '— Miguel H., Ciudad de México.' },
+            ];
+
+            testimonials.forEach((testimonial, index) => {
+                const div = document.createElement('div');
+                div.classList.add('testimonial');
+                div.innerHTML = `<p>${testimonial.text}</p><strong>${testimonial.author}</strong>`;
+                successCases.appendChild(div);
+            });
+
+            this.style.display = 'none';
+            document.getElementById('view-less').style.display = 'inline-block';
+        });
+
+        document.getElementById('view-less').addEventListener('click', function() {
+            const successCases = document.getElementById('success-cases');
+            while (successCases.childNodes.length > 1) {
+                successCases.removeChild(successCases.lastChild);
+            }
+
+            this.style.display = 'none';
+            document.getElementById('view-more').style.display = 'inline-block';
+        });
+    </script>
 
     <section id="horario" class="section-padding" style="background-color: #f9f9f9;">
         <div class="container text-center">
@@ -211,8 +253,8 @@
                 <div class="footer-col">
                     <h4>Legal</h4>
                     <ul>
-                        <li><a href="#" style="color: #ccc;">Aviso de privacidad</a></li>
-                        <li><a href="#" style="color: #ccc;">Términos y condiciones</a></li>
+                        <li><a href="pdfs/AVISO DE PRIVACIDAD.pdf" download="Aviso de privacidad" style="color: #ccc;">Aviso de privacidad</a></li>
+                        <li><a href="pdfs/TÉRMINOS Y CONDICIONES DE USO.pdf" download="Términos y condiciones" style="color: #ccc;">Términos y condiciones</a></li>
                     </ul>
                 </div>
             </div>
