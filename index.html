@@ -254,7 +254,7 @@
                     <h4>Legal</h4>
                     <ul>
                         <li><a href="pdfs/AVISO DE PRIVACIDAD.pdf" download="Aviso de privacidad" style="color: #ccc;">Aviso de privacidad</a></li>
-                        <li><a href="pdfs/TÉRMINOS Y CONDICIONES DE USO.pdf" download="Términos y condiciones" style="color: #ccc;">Términos y condiciones</a></li>
+                        <li><a href="#" id="openModal" style="color: #ccc;">Términos y condiciones</a></li>
                     </ul>
                 </div>
             </div>
@@ -268,6 +268,73 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
+    <!-- Ventana modal -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <!-- Logo de Justicia Laboral México -->
+        <div style="text-align: center;">
+          <img src="img/logo.png" alt="Justicia Laboral México" class="modal-logo">
+          <i class="fas fa-balance-scale fa-2x" style="color: #007BFF; margin-top: 10px;"></i>
+        </div>
+        
+        <!-- Contenido de los términos y condiciones con barra de desplazamiento -->
+        <div class="modal-text" style="overflow-y: auto; max-height: 500px;">
+          <h2>TÉRMINOS Y CONDICIONES DE USO</h2>
+          <p><strong>Última actualización:</strong> Enero 2026</p>
+          <p>Bienvenido(a) al sitio web Justicia Laboral México (en adelante, el “Sitio”), el cual es operado por Justicia Laboral México (en adelante, el “Prestador”). Al acceder, navegar o utilizar el Sitio, usted acepta quedar obligado(a) por los presentes Términos y Condiciones de Uso (los “Términos”). Si no está de acuerdo con ellos, por favor absténgase de utilizar el Sitio.</p>
+          <h3>1. Objeto del Sitio</h3>
+          <p>El Sitio tiene como finalidad proporcionar información general y ofrecer servicios jurídicos en materia laboral en México, así como facilitar el contacto entre los usuarios y el Prestador. El contenido del Sitio no constituye, por sí mismo, asesoría legal personalizada.</p>
+          <h3>2. Aceptación de los Términos</h3>
+          <p>El uso del Sitio implica la aceptación plena y sin reservas de los presentes Términos, así como de cualquier aviso legal, política o lineamiento adicional que se publique en el Sitio.</p>
+          <h3>3. Capacidad Legal</h3>
+          <p>Los servicios están dirigidos a personas mayores de 18 años con capacidad legal para contratar. Al usar el Sitio, el usuario manifiesta cumplir con este requisito.</p>
+          <h3>4. Alcance de la Información y No Garantía de Resultados</h3>
+          <p>La información publicada tiene fines informativos y puede no reflejar cambios recientes en la legislación o criterios judiciales. El Prestador no garantiza resultados específicos en procedimientos o controversias laborales, ya que éstos dependen de múltiples factores ajenos a su control.</p>
+          <h3>5. Relación Abogado–Cliente</h3>
+          <p>El acceso al Sitio o el envío de información a través de formularios no crea automáticamente una relación abogado–cliente. Dicha relación únicamente se entenderá establecida cuando exista un acuerdo expreso y por escrito entre el usuario y el Prestador.</p>
+          <h3>6. Servicios Profesionales</h3>
+          <p>Los servicios jurídicos se prestarán conforme a la legislación aplicable en los Estados Unidos Mexicanos y, en su caso, a los términos particulares que se acuerden con cada cliente mediante contrato de prestación de servicios profesionales.</p>
+          <h3>7. Obligaciones del Usuario</h3>
+          <p>El usuario se obliga a:
+            <ul>
+              <li>Proporcionar información veraz y actualizada.</li>
+              <li>Utilizar el Sitio de forma lícita y conforme a estos Términos.</li>
+              <li>No realizar actos que puedan dañar, inutilizar o sobrecargar el Sitio.</li>
+            </ul>
+          </p>
+          <h3>8. Propiedad Intelectual</h3>
+          <p>Todos los contenidos del Sitio (textos, logotipos, gráficos, diseños, software, etc.) son propiedad del Prestador o de sus licenciantes y están protegidos por las leyes de propiedad intelectual. Queda prohibida su reproducción, distribución o uso sin autorización previa y por escrito.</p>
+          <h3>9. Enlaces a Terceros</h3>
+          <p>El Sitio puede contener enlaces a sitios web de terceros. El Prestador no controla ni se responsabiliza del contenido, políticas o prácticas de dichos sitios.</p>
+          <h3>10. Protección de Datos Personales</h3>
+          <p>El tratamiento de los datos personales del usuario se realizará conforme al Aviso de Privacidad del Sitio y a la Ley Federal de Protección de Datos Personales en Posesión de los Particulares.</p>
+          <h3>11. Limitación de Responsabilidad</h3>
+          <p>En la medida permitida por la ley, el Prestador no será responsable por daños directos o indirectos derivados del uso o imposibilidad de uso del Sitio, ni por decisiones tomadas con base en la información publicada.</p>
+          <h3>12. Modificaciones</h3>
+          <p>El Prestador se reserva el derecho de modificar estos Términos en cualquier momento. Las modificaciones entrarán en vigor a partir de su publicación en el Sitio.</p>
+          <h3>13. Legislación Aplicable y Jurisdicción</h3>
+          <p>Estos Términos se rigen por las leyes de los Estados Unidos Mexicanos. Para la interpretación y cumplimiento de los mismos, las partes se someten a la jurisdicción de los tribunales competentes de la Ciudad de México, renunciando a cualquier otro fuero que pudiera corresponderles.</p>
+          <h3>14. Contacto</h3>
+          <p>Para cualquier duda o aclaración relacionada con estos Términos, el usuario puede contactar a Justicia Laboral México a través de los medios indicados en el Sitio.</p>
+          <p>Al utilizar el Sitio, usted reconoce haber leído, entendido y aceptado los presentes Términos y Condiciones de Uso.</p>
+        </div>
+
+        <!-- Botón para cerrar la ventana -->
+        <button id="closeModal" class="modal-close">Cerrar</button>
+      </div>
+    </div>
+
+    <script>
+      // Abrir la ventana modal
+      document.getElementById('openModal').addEventListener('click', function() {
+        document.getElementById('modal').style.display = 'block';
+      });
+
+      // Cerrar la ventana modal
+      document.getElementById('closeModal').addEventListener('click', function() {
+        document.getElementById('modal').style.display = 'none';
+      });
+    </script>
 </body>
 
 </html>
