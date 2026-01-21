@@ -96,7 +96,7 @@ header {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;       /* Letra delgada (Light) */
     font-size: 0.85rem;     /* Más pequeña */
-    color: #555;            /* Gris oscuro */
+    color: var(--primary-color);            /* Gris oscuro */
     text-transform: uppercase;
     letter-spacing: 4px;    /* Letras separadas para elegancia */
     margin-top: 3px;        /* Separación de la palabra Laboral */
