@@ -243,6 +243,15 @@ footer { background: #222; color: #ccc; padding: 40px 0 20px; }
     .nav-container .btn { margin-top: 10px; }
 }
 
+/* Contenedor del logo en el modal */
+.modal-logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
 /* Estilos para la ventana modal */
 .modal {
   display: none; /* Oculta la ventana por defecto */
@@ -282,7 +291,7 @@ footer { background: #222; color: #ccc; padding: 40px 0 20px; }
   display: block;
   margin: 20px auto 0;
   padding: 10px 20px;
-  background-color: #007BFF;
+  background-color: var(--primary-color);
   color: #fff;
   border: none;
   border-radius: 4px;
